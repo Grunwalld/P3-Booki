@@ -19,7 +19,15 @@ body {
     justify-content: center;
 }
 
+a{
+    text-decoration: none;
+    color: #000;
+}
+
 .main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 37.5px;
     width: 100%;
     max-width: 1440px;
     padding: 0 50px;
@@ -58,18 +66,20 @@ body {
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
+    
 }
 
 .hebergements-and-populaires section {
     background-color: var(--main-bg-color);
     border-radius: 20px;
-    padding: 35px;
+    padding: 35px 35px 0px 35px;
     box-sizing: border-box;
 }
 
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+    height: 10%;
 }
 
 .hebergements-title {
@@ -78,20 +88,49 @@ body {
     align-items: center;
 }
 
+
+.hebergements-cardsP1 .card {
+    display: flex;
+    flex-direction: column  ;
+    margin-top: 33px;
+
+}
+
+.hebergements-cardsP2 .card {
+    display: flex;
+    flex-direction: column  ;
+   
+}
+
+.hebergements-cardsP1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    
+}
+
+.hebergements-cardsP2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .hebergements-cards .card {
     display: flex;
+    flex-direction: column  ;
     margin-top: 33px;
+    width: 30%; 
 }
 
 .hebergements-cards img {
-    width: 37%;
+    width: 100%;
     height: 134px;
     border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 .hebergements-cards .card-content {
-    width: 63%;
+    width: 90%;
     padding-left: 15px;
     display: flex;
     flex-direction: column;
@@ -157,11 +196,80 @@ body {
     margin-bottom: 7px;
 }
 
+/****** activites ***********/
+
+.card-a {
+    background-color: white;
+    border-radius: 20px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card-a img {
+    object-fit: cover;
+}
+
+.activites {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.activites-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 50px 50px 50px;
+}
+
+.activites-cards{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    justify-content: center;
+
+    
+}       
+
+.activites-cards .card-a {
+    display: flex;
+    flex-direction: column  ;
+    width: 22%; 
+}
+
+.activites-cards img {
+    width: 100%;
+    height: 85%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.activites-cards .card-content {
+    width: 100%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.activites-cards .card-title {
+    margin-top: 11px;
+    margin-bottom: 4px;
+}
+
 /* header */
-a:hover{
+
+.logo img {
+    max-height : 100%;
+    width : 50%;
+}
+    
+
+
+header a:hover{
     color: #0065FC;
     border-top: 2px solid #0065FC;
-    padding-top: 29px;   
+    padding-top: 22px;   
     
 }
 
@@ -189,6 +297,7 @@ nav a {
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding: 25px 25px 25px 0px;
 
 }
 .icone_searchbar{
@@ -235,11 +344,15 @@ input[type="text"] {
     border: 0;
 }
 
-
+.black{
+    color: black;
+}
 
 input::placeholder {  
     opacity : 1;
     color:black;
+    font-weight: 700;
+    font-size: larger;
     }
 
 
@@ -259,6 +372,16 @@ input::placeholder {
     gap: 20px;
 
 
+
+}   
+
+.button_filter, .economique{
+    font-weight: 700;
+}
+
+.font_weight_filter{
+    font-weight: 700;
+    font-size: larger;
 }
 .button_filter button{  
     border: none;
@@ -295,6 +418,7 @@ border-radius: 25px
     flex-direction: row;
     align-items: center;
     gap: 10px;
+    padding-top: 10px ;
  
 }
 .fa-info{
@@ -314,11 +438,12 @@ border-radius: 25px
 footer{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 250px;
-    padding: 70px;
+    padding-left: 25px;
+    padding-bottom: 25px;
     background: #F2F2F2;
-    border-radius: 0px 0px 20px 20px;
+
 }
 
 .a_propos, .nos_hebergements, .assistance{
